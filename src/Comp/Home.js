@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import appleicon from './appleicon.webp';
 import googleicon from "./googleicon.png";
 import { useNavigate } from 'react-router-dom';
-
+import { auth } from './firebas';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 export default function Home(user) {
     var navi = useNavigate();
 
@@ -28,6 +29,11 @@ export default function Home(user) {
     function submithandler(e)
     {
         console.log(states);
+        signInWithEmailAndPassword(auth,states.Email,states.Password).then((data)=>{
+          console.log(data);
+        }).catch((e)=>{
+          console.log(e);
+        })
     }
   return (
     <div className="con">

@@ -5,6 +5,7 @@ import userimg from './user.jpeg';
 import DashboardCustomizeIcon from "@mui/icons-material/DashboardCustomize";
 import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
 import SupervisedUserCircleIcon from "@mui/icons-material/SupervisedUserCircle";
+
 import ScheduleIcon from "@mui/icons-material/Schedule";
 import GroupIcon from "@mui/icons-material/Group";
 import ReceiptIcon from "@mui/icons-material/Receipt"; //transactions
@@ -13,9 +14,27 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import PaidIcon from "@mui/icons-material/Paid";
 import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
+import { Doughnut} from "react-chartjs-2";
+
 export default function Innerpage(user) {
     var navigate=useNavigate();
+
+  ChartJS.register(ArcElement, Tooltip, Legend);
     var li_=[{name:"Dashboard"},{name:"Transactions"},{name:"Schedule"},{name:"Users"},{name:"Setting"}];
+    const data = {
+      labels: ["Red", "Blue", "Yellow"],
+      datasets: [
+        {
+          label: "My First Dataset",
+          data: [300, 50, 100],
+          backgroundColor: ["#98D89E", "#EE8484", "#F6DC7D"],
+          hoverOffset: 4,
+        },
+      ],
+    };
+    
+
     var li_2 = [
       { name: "Total Revenues", price: "2,129,430" },
       { name: "Total Transactions", price: "1,520" },
@@ -115,10 +134,31 @@ export default function Innerpage(user) {
                 })}
               </div>
               <div id="thirdiv">
-                <div id="thdi"></div>
+                <div id="thdi">{/* <Doughnut data={data} /> */}</div>
               </div>
               <div id="foudiv">
-                <div id="lfd"></div>
+                <div id="lfd">
+                  <div className="slide">
+                    <h4 id='sh4'>Top products</h4>
+                    <h5 id='sh5'>May-June 2021</h5>
+                  </div>
+                  <div
+                    style={{
+                      width: "90%",
+                      height: "78%",
+                      marginTop:"20px",
+                      display:"flex",
+                      justifyContent:"space-between",
+                      alignItems:"center"
+                      // border: "1px solid black",
+                    }}
+                  >
+                    <Doughnut data={data} />
+                    <div id='tpass'>
+
+                    </div>
+                  </div>
+                </div>
                 <div id="rfd"></div>
               </div>
             </div>

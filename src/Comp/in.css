@@ -147,8 +147,26 @@
     margin-top: 20px;
     margin-left: 20px;
     background: white;
+    display: flex;
+    padding-top: 20px;
+    padding-left: 20px;
+    flex-direction: column;
     margin-right: 40px;
     border-radius: 20px;
+}
+.slide{
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+    align-items: center;
+}
+#sh4{
+    font-size: 22px;
+    font-weight: 500;
+}
+#sh5{
+    font-size: 20px;
+    font-weight: 400;
 }
 #rfd{
     width: 48%;
