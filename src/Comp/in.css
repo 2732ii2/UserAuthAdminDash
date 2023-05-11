@@ -1,0 +1,254 @@
+.innerpage{
+    width: 100%;
+    height: 100vh;
+    background: #DDDDDD;
+    display: flex;
+    /* border: 1px solid black; */
+}
+
+.ileft{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+.iright{
+    width: 75%;
+    height: 100%;
+    border: 1px solid white;
+    /* padding: 20px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bileft{
+    width: 80%;
+    background: black;
+    height: 90%;
+    overflow: hidden;
+    padding-top: 50px;
+    padding-left:70px ;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+}
+
+
+#bih1{
+    color:white;
+    font-size: 36px;
+}
+
+
+#idi{
+    width: 80%;
+    margin-top: 20%;
+    height: 50%;
+    /* border: 1px solid white; */
+}
+
+#idih{
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 40px;
+    display: flex;
+    transition: all .5s;
+    /* justify-content: space-between; */
+    font-size: 20px;
+}
+#idih:hover{
+    color:aqua;
+    cursor: pointer;
+}
+#idsp{
+    margin-left: 20px;
+    letter-spacing: 1.2px;
+    font-weight: 400;
+}
+
+
+
+#lastlidiv{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 32%;
+    /* border: 1px solid white; */
+}
+#h_last{
+    color:white;
+    margin-bottom: 25px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+#h_pl{
+    color:white;
+}
+@media (max-width:1275px) {
+    .bileft{
+        padding-left: 40px;
+        padding-top: 50px;
+    }
+}
+
+
+#iri{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    height: 93%;
+    /* border: 1px solid black; */
+}
+
+
+#firstslid{
+    width: 97%;
+    height: 50px;
+    display: flex;
+    padding-left: 20px;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    /* border: 1px solid black; */
+}
+
+
+#secdiv{
+    width: 95%;
+    height: 25%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid black; */
+}
+#thirdiv{
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    /* border: 1px solid black; */
+}
+#thdi{
+    width: 97%;
+    height: 95%;
+    background: #FFFFFF;
+    
+    border-radius: 20px;
+    /* border: 1px solid black; */
+}
+
+#lfd{
+    width: 48%;
+    height: 88%;
+    margin-top: 20px;
+    margin-left: 20px;
+    background: white;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+#rfd{
+    width: 48%;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 88%;
+    background: white;
+}
+#foudiv{
+    width: 94%;
+
+    display: flex;
+    height: 30%;
+    /* padding: 10px; */
+    
+    /* border: 1px solid black; */
+}
+#same_sec{
+    width: 28%;
+    height: 95%;
+    margin: 10px;
+    display: flex;
+    overflow: hidden;
+    padding: 20px;
+    flex-direction: column;
+    border-radius: 20px;
+    /* border: 1px solid black; */
+}
+#ssd{
+    width: 90%;
+    height: 50px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+    /* border: 1px solid black; */
+}
+#slp{
+    font-size: 38px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+#shp{
+    font-size: 22px;
+    font-weight: 400;
+    /* border: 1px solid black; */
+    min-height: 30px;
+    overflow: hidden;
+    letter-spacing: 2px;
+    margin-top: 20px;
+}
+._0_{
+    background: #DDEFE0;
+}
+._1_{
+    background: 
+#F4ECDD;
+}
+._2_{
+    background: #EFDADA;
+}
+._3_{
+    background: 
+#DEE0EF;
+}
+
+
+#ifid{
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding-right: 50px;
+    /* border: 1px solid black; */
+}
+#searchdiv{
+    width: 55%;
+    height: 90%;
+    background: white;
+    border-radius: 20px;
+    /* border: 1px solid black; */
+}
+#iconduv{
+    width: 9%;
+    height: 90%;
+    border-radius: 60%;
+    /* border: 1px solid black; */
+}
+#useriddiv{
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    /* border-radius: 60%; */
+    height: 90%;
+}
+#img_{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
