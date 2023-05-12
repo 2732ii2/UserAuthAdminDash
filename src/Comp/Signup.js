@@ -43,6 +43,8 @@ export default function Signup() {
         }, 2000);
       } catch (e) {
         console.log(e);
+        setmessstate(e.message);
+        setTimeout(() => setmessstate(""), 1000);
       }
     } else {
       setmessstate("Fill the Details First");
@@ -113,7 +115,15 @@ export default function Signup() {
              <button onClick={submithandler} id="btn_si">
                Sign Up
              </button>
-             <p style={{ color: "red", marginTop: "-30px" }}>
+             <p
+               style={{
+                 color: "red",
+                 marginTop: "-30px",
+                 height: "20px",
+                 overflow: "hidden",
+                 width: "80%",
+               }}
+             >
                {" "}
                {messstate ? messstate : ""}
              </p>

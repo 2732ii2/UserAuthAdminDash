@@ -37,6 +37,9 @@ export default function Home(user) {
             })
             .catch((e) => {
               console.log(e);
+              setmessstate(e.message);
+              setTimeout(() => setmessstate(""), 1000);
+
             });
         }
         else{
@@ -107,7 +110,7 @@ export default function Home(user) {
             <button onClick={submithandler} id="btn_si">
               Sign In
             </button>
-            <p style={{ color: "red",marginTop:"-30px" }}> {messstate?messstate:""}</p>
+            <p style={{ color: "red",marginTop:"-30px" ,height:"20px",overflow:"hidden",width:"80%" }}> {messstate?messstate:""}</p>
           </div>
 
           <h3
