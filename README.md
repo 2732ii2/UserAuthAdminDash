@@ -1,3 +1,13 @@
+# ScreenShots
+ 
+ 
+ - Sign IN Page
+<img width="1440" alt="Screenshot 2023-05-12 at 4 05 10 PM" src="https://github.com/2732ii2/UserAuthAdminDash/assets/83974207/b22e63d7-d29b-41f6-b7c9-3ecb0545860f">
+ - Sign Up Page
+<img width="1440" alt="Screenshot 2023-05-12 at 4 15 39 PM" src="https://github.com/2732ii2/UserAuthAdminDash/assets/83974207/7a909876-e096-45ae-a21b-8d5d9e28ad9f">
+ - Main Page
+<img width="1440" alt="Screenshot 2023-05-12 at 4 16 21 PM" src="https://github.com/2732ii2/UserAuthAdminDash/assets/83974207/398b0293-a621-4cff-8988-8807d3c60aed">
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
