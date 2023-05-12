@@ -21,9 +21,28 @@ export default function Innerpage(user) {
     var navigate=useNavigate();
 
   ChartJS.register(ArcElement, Tooltip, Legend);
+  var l_graph = [
+    { name: "Basic Trees", percent: "55%", color: "#98D89E" },
+    { name: "Custom Short Pants", percent: "31%", color: "#F6DC7D" },
+    { name: "Super Hoodies", percent: "14%", color: "#EE8484" },
+  ];
+  var l_right = [
+    {
+      name: "Meeting with suppliers from Kuta Bali",
+      time: "14.00-15.00",
+      duration: "14.00-15.00",
+      color: "#9BDD7C",
+    },
+    {
+      name: "Check operation at Giga Factory 1",
+      time: "18.00-20.00",
+      duration: "at Central Jakarta ",
+      color: "#6972C3",
+    },
+  ];
     var li_=[{name:"Dashboard"},{name:"Transactions"},{name:"Schedule"},{name:"Users"},{name:"Setting"}];
     const data = {
-      labels: ["Red", "Blue", "Yellow"],
+      // labels: ["Red", "Blue", "Yellow"],
       datasets: [
         {
           label: "My First Dataset",
@@ -139,27 +158,106 @@ export default function Innerpage(user) {
               <div id="foudiv">
                 <div id="lfd">
                   <div className="slide">
-                    <h4 id='sh4'>Top products</h4>
-                    <h5 id='sh5'>May-June 2021</h5>
+                    <h4 id="sh4">Top products</h4>
+                    <h5 id="sh5">May-June 2021</h5>
                   </div>
                   <div
                     style={{
                       width: "90%",
                       height: "78%",
-                      marginTop:"20px",
-                      display:"flex",
-                      justifyContent:"space-between",
-                      alignItems:"center"
+                      marginTop: "10px",
+                      display: "flex",
+                      justifyContent: "space-between",
+                      alignItems: "center",
                       // border: "1px solid black",
                     }}
                   >
                     <Doughnut data={data} />
-                    <div id='tpass'>
-
+                    <div id="tpass">
+                      {l_graph.map((e, i) => {
+                        return (
+                          <div style={{ marginTop: "10px" }}>
+                            <div
+                              style={{
+                                display: "flex",
+                                alignItems: "center",
+                                marginBottom: "5px",
+                                fontSize: "20px",
+                              }}
+                            >
+                              {" "}
+                              <div
+                                style={{
+                                  background: `${e.color}`,
+                                  width: "10px",
+                                  height: "10px",
+                                  marginRight: "10px",
+                                  borderRadius: "20px",
+                                }}
+                              >
+                                {" "}
+                              </div>{" "}
+                              {e.name}
+                            </div>
+                            <p style={{ fontSize: "14px" }}>{e.percent}</p>
+                          </div>
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
-                <div id="rfd"></div>
+                <div id="rfd">
+                  <div className="slide">
+                    <h4 id="sh4">Today's schedule</h4>
+                    <h5 id="sh5">See All</h5>
+                  </div>
+                  <div
+                    style={{
+                      width: "90%",
+                      height: "70%",
+                      // border: "1px solid black",
+                      marginTop: "10px",
+                      display: "flex",
+                      flexDirection: "column",
+                    }}
+                    className="bottom_part"
+                  >
+                    {
+                      l_right.map((e,i)=>{
+                        return (
+                          <div
+                            key={i}
+                            style={{
+                              width: "100%",
+                              height: "50%",
+                              // border: "1px solid black",
+                              marginTop: "10px",
+                              display: "flex",
+                              overflow:"hidden",
+                              marginLeft: "10px",
+                            }}
+                          >
+                            {" "}
+                            <div
+                              style={{
+                                width: "5px",
+                                borderRadius: "20px",
+                                height: "90%",
+                                background: `${e.color}`,
+                              }}
+                              id="slit"
+                            ></div>{" "}
+                            <div style={{ marginLeft: "20px" }}>
+                              <h2 id="sli_n_2">{e.name}</h2>
+                              <h5 id="sli_n_5">{e.time} </h5>
+                              <h5 id="sli_n_5">{e.duration}</h5>
+                            </div>{" "}
+                          </div>
+                        );
+                      })
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           </div>
