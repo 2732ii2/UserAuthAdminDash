@@ -126,9 +126,9 @@
 }
 #thirdiv{
     width: 95%;
-    display: flex;
+    /* display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     height: 40%;
     /* border: 1px solid black; */
 }
@@ -136,9 +136,9 @@
     width: 97%;
     height: 95%;
     background: #FFFFFF;
-    
+    margin-left: 20px;
     border-radius: 20px;
-    /* border: 1px solid black; */
+    /* border: 1px solid orange; */
 }
 
 #lfd{
@@ -149,6 +149,7 @@
     background: white;
     display: flex;
     padding-top: 10px;
+    overflow: hidden;
     padding-left: 20px;
     flex-direction: column;
     margin-right: 40px;
@@ -250,6 +251,10 @@
 #searchdiv{
     width: 55%;
     height: 90%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background: white;
     border-radius: 20px;
     /* border: 1px solid black; */

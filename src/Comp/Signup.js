@@ -7,10 +7,12 @@ import { useNavigate } from "react-router-dom";
 import { auth } from './firebas';
 export default function Signup() {
    var list_ = [
-    {name:"User",place:"Write the Username"},
-    { name: "Email", place: "", img_: googleicon },
-    { name: "Password", place: "write your password" },
+    {name:"User",place:"Write the Username",type:"text"},
+    { name: "Email", place: "", img_: googleicon ,type:"text"},
+    { name: "Password", place: "write your password",type:"password" },
    ];
+    var [messstate, setmessstate] = useState("");
+
    var navi = useNavigate();
    var [states, setStates] = useState({
     User:"",
@@ -20,21 +22,31 @@ export default function Signup() {
    // console.log(states);
    async function submithandler(e) {
      console.log(states);
-
-    try{
-        var data=await createUserWithEmailAndPassword(auth,states.Email,states.Password);
+    if (
+      states.Email !== "" &&
+      states.Password !== "" &&
+      states.User !== ""
+    ) {
+      try {
+        var data = await createUserWithEmailAndPassword(
+          auth,
+          states.Email,
+          states.Password
+        );
         console.log(data);
-        await updateProfile(data.user,{
-            displayName:states.User
+        await updateProfile(data.user, {
+          displayName: states.User,
         });
         console.log("profile is updated");
-        setTimeout(()=>{
-            navi('/mainpage');
-        },2000)
-    }
-    catch(e)
-    {
+        setTimeout(() => {
+          navi("/mainpage");
+        }, 2000);
+      } catch (e) {
         console.log(e);
+      }
+    } else {
+      setmessstate("Fill the Details First");
+      setTimeout(() => setmessstate(""), 1000);
     }
    }
    return (
@@ -91,15 +103,20 @@ export default function Signup() {
                      name={e.name}
                      id="inp"
                      placeholder={e.place}
-                     type="text"
+                     type={`${e.type}`}
                    />
                  </div>
                );
              })}
              {/* <h2 id="rp2">Forget Password ?</h2> */}
+
              <button onClick={submithandler} id="btn_si">
                Sign Up
              </button>
+             <p style={{ color: "red", marginTop: "-30px" }}>
+               {" "}
+               {messstate ? messstate : ""}
+             </p>
            </div>
 
            <h3
